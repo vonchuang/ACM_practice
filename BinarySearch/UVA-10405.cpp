@@ -13,9 +13,7 @@ int main(){
 
 	int i, j;
 
-	//cin >> citia;
 	while(getline(cin, citia)){
-		//cin >> citib;
 		getline(cin, citib);
 		lena = citia.length();
 		lenb = citib.length();
@@ -41,7 +39,6 @@ int main(){
 		// print result
 		printf("%d\n", cnt[lena][lenb]);
 		
-	//	cin >> citia;
 	}
 
 	return 0;

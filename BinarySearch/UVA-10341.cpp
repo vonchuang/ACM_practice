@@ -31,12 +31,8 @@ int main(){
 	while(scanf("%d%d%d%d%d%d", &p, &q, &r, &s, &t, &u) != EOF){
 		double result = BinarySearch(0.0, 1.0);
 		double check;
-	
-		//if(result < 0) result = -result;
-		//check = p*exp(-result)+q*sin(result)+r*cos(result)+s*tan(result)+t*pow(result,2)+u;
-		
+
 		if(result == -1)
-		//if(check-0 > 1e-10) 
 			printf("No solution\n");
 		
 		else 

@@ -10,7 +10,6 @@ using namespace std;
 vector<vector<int> > adj(MAX);
 vector<int> visit(MAX, false);
 vector<int> finish;
-//int scc[MAX];
 int N, M;
 
 
@@ -70,13 +69,7 @@ int main(){
 //				printf("(%d %d)", w, v);
 			}
 		}
-/*		
-		for(i=1;i<=N;++i){
-			for(j=0;j<adj[i].size();++j){
-				printf("%d %d\n", i, adj[i][j]);
-			}
-		}
-*/
+
 		for(i=1; i<=N; ++i){
 			if(!visit[i]){
 				DFS(i);

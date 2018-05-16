@@ -42,29 +42,11 @@ void DFS(int prev, int cur){
 	
 	}
 
-
-//	if((cur == prev && child > 1) || (cur != prev && cut)){
 	if((child >= 2 || prev != -1) && cut){
 		++ans;
 		//printf("%d\n", cur);
 	}
-	
-	/*
-	for(idx = adj_list[cur]; ~idx; idx = edge[idx].next){
-		if(!dfn[edge[idx].to]){
-			DFS(cur, edge[idx].to);
-			low[cur] = min(low[cur], low[edge[idx].to]);
-			if(low[edge[idx].to] >= dfn[cur])
-				cut = true;
-			++child;
-		}else if(edge[idx].to != prev){
-			low[cur] = min(low[cur], dfn[edge[idx].to]);
-		}
-	}
-	if((child > 1 || prev != -1) && cut){
-		ans++;
-	}
-*/
+
 
 }
 

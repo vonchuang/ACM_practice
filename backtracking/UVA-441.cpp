@@ -17,7 +17,7 @@ void backtrack(int digit, int index){
 		for(i=1; i<N; ++i){
 			printf(" %d", ans[i]);
 		}
-		//if(!(ans[0] == array[n-N] && ans[N-1] == array[]))
+        
 		printf("\n");
 		return;
 	}
@@ -30,17 +30,10 @@ void backtrack(int digit, int index){
 			backtrack(digit+1, i);
 			vis[i] = 0;
 		}
-	}	
-
-	//vis[index] = 0;
-	//return;
-
-
+	}
 }
 
 int main(){
-
-
 	int i, j;
 
 	scanf("%d", &n);
@@ -50,17 +43,8 @@ int main(){
 		for(i=0; i<n; ++i)
 			scanf("%d", &array[i]);
 
-		// backtracking
-		/*	
-		for(i=0; i<(n-N+1); ++i){
-			backtrack(0, i);
-			for(j=0; j<n; ++j){
-				vis[j] = 0;
-			}
-		}
-		*/
-
 		backtrack(0, 0);
+        
 		// initiMaalize
 		for(i=0;i<n;++i){
 			array[i] = 0;
@@ -71,7 +55,5 @@ int main(){
 			printf("\n");
 		
 	}
-	
-
 	return 0;
 }

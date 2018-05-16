@@ -60,15 +60,6 @@ int main(){
 		for(i=0;i<=N;++i){
 			adj[i].clear();
 		}
-		/*
-		for(i=0; i<=N; ++i){
-			for(j=0; j<=N; ++j){
-				adj[i][j] = 0;
-			}
-			visit[i] = 0;
-//			scc[i] = 0;
-		}
-		*/
 
 		for(i=0; i<m; ++i){
 			scanf("%d%d", &x, &y);
@@ -81,12 +72,6 @@ int main(){
 				DFS(i);
 			}
 		}
-
-		/*
-		for(i=0; i<=N; ++i){
-			visit[i] = 0;
-		}
-		*/
 
 		visit.assign(N+1, 0);
 		

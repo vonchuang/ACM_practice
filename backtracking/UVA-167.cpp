@@ -10,23 +10,6 @@ int result = 0;
 int mat[MAX][MAX];
 int vis[MAX][MAX];
 
-/*
-void printMat(){
-	int i,j;
-	printf("=================================\n");
-	for(i=0;i<MAX;++i){
-		for(j=0;j<MAX;++j){
-			if(vis[i][j] != 0)
-				printf("%2d ", mat[i][j]);
-			else
-				printf("   ");
-		}
-		printf("\n");
-	}
-
-	printf("======================================\n");
-}
-*/
 int check(int x, int a){
     int i, j;
     // check row and col
@@ -55,24 +38,7 @@ int check(int x, int a){
 			
 		}
 	}
-	
-	/*
-    if(a == x){
-        for(i=0;i<MAX;++i){
-            if(vis[i][i] != 0){
-                return 0;
-            }
-        }
-    }
-    
-    if(a == (9-x)){
-        for(i=0;i<MAX;++i){
-            if(vis[i][9-i] != 0){
-                return 0;
-            }
-        }
-    }
-    */
+
 	return 1;
 }
 

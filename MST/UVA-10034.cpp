@@ -57,12 +57,7 @@ void Kruskal(){
 
 		j++;
 	}
-/*
-	if(i == M)
-		printf("tree\n");
-	else
-		printf("forest\n");
-*/
+
 }
 
 int main(){
