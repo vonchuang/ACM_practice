@@ -1,7 +1,6 @@
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
-#include <queue>
 #define MAX 205
 #define INF 1000006
 
@@ -27,23 +26,6 @@ bool DFS(int cur, int t, int n){
 	}
 	return false;
 
-/*
-    queue<int> Q;
-    Q.push(S);
-
-    while (!Q.empty() && neck[T] == 0) {
-        int cur = Q.front(); 
-		int i;
-		Q.pop();
-        for (i = 1; i <= N; ++i) {
-            if (neck[i] == 0 && cap[cur][i] > flow[cur][i]) {
-                Q.push(i);
-                pa[i] = cur;
-                neck[i] = min(neck[cur], cap[cur][i] - flow[cur][i]);
-            }
-        }
-    }
-*/
 	return 1;
 }
 
@@ -65,7 +47,6 @@ int FordFulkerson(int n){
 		memset(vis, 0, sizeof(vis));
 		memset(neck, 0, sizeof(neck));
 		neck[S] = INF;
-		//if(!DFS(1, n, n))	break;
 		DFS(S, T, n);
 		if(neck[T] == 0)	break;
 
