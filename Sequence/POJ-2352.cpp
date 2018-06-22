@@ -1,6 +1,5 @@
 #include<cstring>
 #include<cstdio>  
-#include<algorithm>
 
 #define MAX 32005
 
@@ -42,7 +41,7 @@ int main(){
             Updata(x, 1);
         }
         
-        for(i = 0; i < n; ++i)  
+        for(i = 0; i < n; ++i)
             printf("%d\n", cnt[i]);
     }  
     return 0;  
