@@ -13,16 +13,14 @@ int LowBit(int n){
     return n & -n;
 }
 
-void Updata(int x, int y, int delta)
-{  
+void Updata(int x, int y, int delta){
     int i,j;
     for(i=x; i<=S; i+=LowBit(i))
         for(j=y; j<=S; j+=LowBit(j))
             t[i][j] += delta;
 }
 
-int Sum(int x, int y)
-{  
+int Sum(int x, int y){
     int sum = 0;
     
     while(x > 0){
@@ -36,28 +34,22 @@ int Sum(int x, int y)
     return sum;  
 }
 
-int main()  
-{  
+int main(){
     int in0, instr, x, y, A;
     int x1, y1, x2, y2;
     while(scanf("%d%d", &in0, &S) != EOF){
         S++;
-        
         memset(t, 0, sizeof(t));
-        
         scanf("%d",&instr);
         
-        while( instr != 3 )
-        {
-            if( instr == 1 )
-            {
+        while( instr != 3 ){
+            if( instr == 1 ){
                 scanf("%d%d%d",&x,&y,&A);
                 x++;
                 y++;
                 Updata(x, y, A);
             }
-            if( instr == 2 )
-            {
+            if( instr == 2 ){
                 int ans;
                 scanf("%d%d%d%d", &x1, &y1, &x2, &y2);
                 x1++;
@@ -71,5 +63,5 @@ int main()
             scanf("%d", &instr);
         }
     }
-return 0;  
+    return 0;
 }  
